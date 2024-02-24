@@ -6,8 +6,6 @@ import { getUserById } from "@/lib/user-service";
 import { AccessToken } from "livekit-server-sdk";
 import { v4 } from "uuid";
 
-//OVDE IMA ERROR
-
 export const createViewerToken = async (hostIdentity: string) => {
     let self;
 
