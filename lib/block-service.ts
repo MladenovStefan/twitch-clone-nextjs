@@ -6,7 +6,7 @@ export const isBlockedByUser = async (id: string) => {
         const self = await getSelf();
 
         const otherUser = await db.user.findUnique({
-            where: {id}
+            where: { id }
         });
 
         if(!otherUser){
@@ -14,7 +14,7 @@ export const isBlockedByUser = async (id: string) => {
         }
 
         if(otherUser.id === self.id){
-            return true;
+            return false;
         }
 
         const existingBlock = await db.block.findUnique({

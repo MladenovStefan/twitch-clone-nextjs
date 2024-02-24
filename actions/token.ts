@@ -6,6 +6,8 @@ import { getUserById } from "@/lib/user-service";
 import { AccessToken } from "livekit-server-sdk";
 import { v4 } from "uuid";
 
+//OVDE IMA ERROR
+
 export const createViewerToken = async (hostIdentity: string) => {
     let self;
 
@@ -46,8 +48,6 @@ export const createViewerToken = async (hostIdentity: string) => {
         canPublish: false,
         canPublishData: true,
     });
-
-    //Error is somewhere here or use-viewer-token.ts or user-service.ts or stream-player.tsx
 
     return await Promise.resolve(token.toJwt());
 }

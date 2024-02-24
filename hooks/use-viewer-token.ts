@@ -31,8 +31,7 @@ export const useViewerToken = (hostIdentity: string) => {
                 toast.error("Something went wrong")
             }
         }
-
-        createToken()
+        createToken();
     }, [hostIdentity]);
 
     return {
